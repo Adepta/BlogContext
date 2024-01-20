@@ -1,0 +1,18 @@
+﻿version: '3.1'
+
+services:
+#  blog_project:
+#    image: blog_project
+#    build:
+#      context: .
+#      dockerfile: Blog_Project/Dockerfile
+#    ports:
+#      - "8080:80"  # Map container port 80 to host port 8080
+
+  db_mssql:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "S3cur3P@ssW0rd!"
+      ACCEPT_EULA: "Y"
